@@ -8,9 +8,11 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/SciencePlots-{{ version }}.tar.gz
   sha256: 2b002f263734a718acdf1e5be57f0de5ee887e70517dfbe1118a27d0ee3dfb0f
+  patches:
+    - setup.patch
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
