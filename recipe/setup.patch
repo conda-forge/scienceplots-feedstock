@@ -1,0 +1,22 @@
+From 700339a2d4ae3217afd9affc1a2659fa4577184a Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Thu, 21 Jul 2022 15:24:47 -0600
+Subject: [PATCH] Global Install
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index a5a6dca..c8fd2b3 100644
+--- a/setup.py
++++ b/setup.py
+@@ -22,7 +22,7 @@ def install_styles():
+     # Find all style files
+     stylefiles = glob.glob('styles/**/*.mplstyle', recursive=True)
+     # Find stylelib directory (where the *.mplstyle files go)
+-    mpl_stylelib_dir = os.path.join(matplotlib.get_configdir(), "stylelib")
++    mpl_stylelib_dir = os.path.abspath(os.path.join(matplotlib.matplotlib_fname(), "..", "stylelib"))
+     if not os.path.exists(mpl_stylelib_dir):
+         os.makedirs(mpl_stylelib_dir)
+     # Copy files over
