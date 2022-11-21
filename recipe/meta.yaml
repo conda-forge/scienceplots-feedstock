@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/SciencePlots-{{ version }}.tar.gz
   sha256: 049558e79b6c56987c7840c489ccb8d0c3d0406bdd60bfd91158d84a50af9b59
-  patches:
-    - setup.patch
 
 build:
   number: 0
