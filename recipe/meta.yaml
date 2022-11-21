@@ -1,5 +1,5 @@
 {% set name = "scienceplots" %}
-{% set version = "1.0.9" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/SciencePlots-{{ version }}.tar.gz
-  sha256: 2b002f263734a718acdf1e5be57f0de5ee887e70517dfbe1118a27d0ee3dfb0f
+  sha256: 049558e79b6c56987c7840c489ccb8d0c3d0406bdd60bfd91158d84a50af9b59
   patches:
     - setup.patch
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -37,7 +37,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Matplotlib styles for scientific plotting'
+  summary: Matplotlib styles for scientific plotting
   description: |
     This repo has Matplotlib styles to format your figures for scientific
     papers, presentations and theses.
