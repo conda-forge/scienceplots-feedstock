@@ -1,11 +1,11 @@
-About scienceplots
-==================
+About scienceplots-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scienceplots-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/garrettj403/SciencePlots/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scienceplots-feedstock/blob/main/LICENSE.txt)
 
 Summary: Matplotlib styles for scientific plotting
 
