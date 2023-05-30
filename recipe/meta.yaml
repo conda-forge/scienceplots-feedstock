@@ -1,5 +1,5 @@
 {% set name = "scienceplots" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/SciencePlots-{{ version }}.tar.gz
-  sha256: efee11d664029e2da1c634addd961972633d16a2d9a30b64331b10ee6c8ba2f0
+  sha256: 66fcc689d2b5cafbada7372ff9d0a53fbc10f857b3cbda0ab432c7d78acd768b
 
 build:
   number: 0
