@@ -10,20 +10,23 @@ source:
   sha256: d8d197e3410f87ebdad0b9c265eaab596094fb082d97123e835f6bc32800ab54
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
+    - python >=3.6
+    - setuptools
     - matplotlib-base
     - pip
-    - python >=3.6
   run:
-    - matplotlib-base
     - python >=3.6
+    - matplotlib-base
 
 test:
+  imports:
+    - scienceplots
   commands:
     - pip check
     - python -c "import matplotlib.pyplot as plt; import scienceplots; plt.style.use('science')"
