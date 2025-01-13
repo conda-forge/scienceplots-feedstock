@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/SciencePlots-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/SciencePlots-{{ version }}.tar.gz
   sha256: d8d197e3410f87ebdad0b9c265eaab596094fb082d97123e835f6bc32800ab54
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
     - matplotlib-base
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - matplotlib-base
 
 test:
@@ -32,6 +32,7 @@ test:
     - python -c "import matplotlib.pyplot as plt; import scienceplots; plt.style.use('science')"
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/garrettj403/SciencePlots/
