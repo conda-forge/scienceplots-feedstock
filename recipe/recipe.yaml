@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: scienceplots
-  version: "2.2.1"
+  version: "2.2.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 51ad98c420e499d3284d07b6447a4b3aedd8ec122aca39ba91c58205226c408a
+  sha256: d46ce7170b4160265c777a48f73a0db1fdff8460f59a0ded0e364acb139ab115
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
